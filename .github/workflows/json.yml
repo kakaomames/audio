@@ -1,0 +1,115 @@
+name: Advanced Audio Asset Management with Fingerprint
+
+on:
+  push:
+    paths:
+      - 'minecraft/**'
+      - 'ポケモンクエスト/**'
+      - 'アナザーエデン/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Update Audio Assets
+        run: |
+          python - <<EOF
+          import os
+          import json
+          import uuid
+          import hashlib
+
+          def get_hash(path):
+              with open(path, 'rb') as f:
+                  return hashlib.sha1(f.read()).hexdigest()
+
+          AUDIO_JSON = 'audio.json'
+          MANIFEST_JSON = 'audiomanifest.json'
+          TARGET_DIRS = ['minecraft', 'ポケモンクエスト', 'アナザーエデン']
+
+          # 1. 既存データの読み込み
+          old_audio_data = {}
+          if os.path.exists(AUDIO_JSON):
+              with open(AUDIO_JSON, 'r', encoding='utf-8') as f:
+                  old_audio_data = json.load(f)
+          
+          manifest_data = {}
+          if os.path.exists(MANIFEST_JSON):
+              with open(MANIFEST_JSON, 'r', encoding='utf-8') as f:
+                  manifest_data = json.load(f)
+
+          # 指紋(hash)からUUIDを逆引きするための辞書を作る
+          # 前回のaudio.jsonにはhashが入っていない可能性があるので、pathからも追跡
+          hash_to_uuid = {}
+          path_to_uuid = {info['path']: k for k, info in old_audio_data.items() if isinstance(info, dict)}
+
+          new_audio_data = {}
+          
+          # 2. ファイルスキャン
+          for target in TARGET_DIRS:
+              if not os.path.exists(target): continue
+              for root, dirs, files in os.walk(target):
+                  for file in files:
+                      if file.startswith('.'): continue
+                      
+                      local_path = os.path.join(root, file)
+                      full_url_path = f"/audio/{local_path}".replace('\\', '/')
+                      file_hash = get_hash(local_path)
+                      
+                      # 追跡ロジック
+                      target_uuid = None
+                      
+                      # A. 同じパスが既にあるか？
+                      if full_url_path in path_to_uuid:
+                          target_uuid = path_to_uuid[full_url_path]
+                      else:
+                          # B. パスは違うけど、中身（ハッシュ）が同じやつがいるか？
+                          # (過去の全データからハッシュ一致を探す)
+                          for uid, info in old_audio_data.items():
+                              if info.get('hash') == file_hash:
+                                  target_uuid = uid
+                                  print(f"Rename detected! {info['path']} -> {full_url_path}")
+                                  # マニフェストに履歴を記録
+                                  new_gen_uuid = f"uuid_{uuid.uuid4().hex[:8]}"
+                                  manifest_data[target_uuid] = new_gen_uuid
+                                  target_uuid = new_gen_uuid # 新しいIDに更新
+                                  break
+                      
+                      # C. 完全な新規ファイル
+                      if not target_uuid:
+                          target_uuid = f"uuid_{uuid.uuid4().hex[:8]}"
+                          if "null" not in manifest_data: manifest_data["null"] = []
+                          manifest_data["null"].append(target_uuid)
+                      
+                      new_audio_data[target_uuid] = {
+                          "path": full_url_path,
+                          "hash": file_hash,
+                          "name": os.path.splitext(file)[0]
+                      }
+
+          # 4. 保存
+          with open(AUDIO_JSON, 'w', encoding='utf-8') as f:
+              json.dump(new_audio_data, f, ensure_ascii=False, indent=2)
+          with open(MANIFEST_JSON, 'w', encoding='utf-8') as f:
+              json.dump(manifest_data, f, ensure_ascii=False, indent=2)
+
+          print(f"Update complete. Total items: {len(new_audio_data)}")
+          EOF
+
+      - name: Commit and Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add audio.json audiomanifest.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "update: audio assets with hash tracking [skip ci]" && git push)
