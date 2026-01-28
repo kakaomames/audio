@@ -419,6 +419,21 @@
     "hash": "88a9d896cde91657e1a8a8af72d5e8e8753d3518",
     "name": "bgm_event_detective"
   },
+  "uuid_9642eb8d": {
+    "path": "/audio/アナザーエデン/bgm_時の塔.mp3",
+    "hash": "58766f9f1c21c6b18bf78cd07025c6dbb087dddf",
+    "name": "bgm_時の塔"
+  },
+  "uuid_b17151eb": {
+    "path": "/audio/アナザーエデン/bgm_ゼノドメイン.mp3",
+    "hash": "0365751b75c40d6cfc869bdc34f02f32318017f6",
+    "name": "bgm_ゼノドメイン"
+  },
+  "uuid_95b1a80c": {
+    "path": "/audio/アナザーエデン/bgm_dungeon_time_layer_galleria.mp3",
+    "hash": "d6ab52ec67f07766013c472c9cda6896b104d3cc",
+    "name": "bgm_dungeon_time_layer_galleria"
+  },
   "uuid_b674afe8": {
     "path": "/audio/アナザーエデン/bgm_hurryup.mp3",
     "hash": "6062fe1c2179880f2a21aa978cd26543ee423ec5",
@@ -433,6 +448,16 @@
     "path": "/audio/アナザーエデン/bgm_field_modern.mp3",
     "hash": "185d6c18a831c2f4828384f3f386d3180c098b9e",
     "name": "bgm_field_modern"
+  },
+  "uuid_a14c72f6": {
+    "path": "/audio/アナザーエデン/bgm_鬼竜.mp3",
+    "hash": "49c53105991d17acd81cea5f5cbd1f757df6a24d",
+    "name": "bgm_鬼竜"
+  },
+  "uuid_20a0666f": {
+    "path": "/audio/アナザーエデン/bgm_工業地帯.mp3",
+    "hash": "2f59cdee6c4dd795326cf61d172693c7e7b74792",
+    "name": "bgm_工業地帯"
   },
   "uuid_c1bd88ed": {
     "path": "/audio/アナザーエデン/bgm_thema_p5r.mp3",
@@ -449,6 +474,11 @@
     "hash": "1909fc4f7904201cfe89b06a0db90203edec9113",
     "name": "bgm_field_time_forgot"
   },
+  "uuid_c65d01a3": {
+    "path": "/audio/アナザーエデン/bgm_dungeon_wonder_forest.mp3",
+    "hash": "ddb15a72d0dd2175118644cb2a4b63e8bee1ac7a",
+    "name": "bgm_dungeon_wonder_forest"
+  },
   "uuid_3e639011": {
     "path": "/audio/アナザーエデン/bgm_field_snakebone_island.mp3",
     "hash": "ec5c957c6b10a205189f3ea5eb6213c5aea9681b",
@@ -464,10 +494,25 @@
     "hash": "213c302fa980dfdeaa5f6ce62c49692c61d836fb",
     "name": "bgm_town_raula_dome"
   },
+  "uuid_95f2c52a": {
+    "path": "/audio/アナザーエデン/bgm_次のボスへ！.mp3",
+    "hash": "9d9d02c104a4c2725ce54301e6658789e35e5eab",
+    "name": "bgm_次のボスへ！"
+  },
+  "uuid_31bb9392": {
+    "path": "/audio/アナザーエデン/bgm_ダンジョン_次元_バトルシップ.mp3",
+    "hash": "444c8920f5089884eea6b7288c41fd66a1cfcf13",
+    "name": "bgm_ダンジョン_次元_バトルシップ"
+  },
   "uuid_32301167": {
     "path": "/audio/アナザーエデン/bgm_ユニガン.mp3",
     "hash": "67266e25905b7b920ffa23065cafa758815724fc",
     "name": "bgm_ユニガン"
+  },
+  "uuid_9f4ab1b5": {
+    "path": "/audio/アナザーエデン/bgm_battle_ノーマル_現代.mp3",
+    "hash": "565091376984d7c7b66d232e9642d04c813798f8",
+    "name": "bgm_battle_ノーマル_現代"
   },
   "uuid_937aa971": {
     "path": "/audio/アナザーエデン/bgm_バルオキー.mp3",
@@ -489,6 +534,11 @@
     "hash": "1a8b9e19b59eadc50edb92de96588ef81942a15a",
     "name": "bgm_負け"
   },
+  "uuid_26bb40b3": {
+    "path": "/audio/アナザーエデン/bgm_battle_異界_boss.mp3",
+    "hash": "99eed7344f0beca31f8ae1d04fdb9feda89e07ed",
+    "name": "bgm_battle_異界_boss"
+  },
   "uuid_35d8ff02": {
     "path": "/audio/アナザーエデン/bgm_event_cc_unmeini_torawareshi_monotachi.mp3",
     "hash": "6032cbd51bfc75bd3c64356aa74be9b49f0accff",
@@ -498,6 +548,16 @@
     "path": "/audio/アナザーエデン/bgm_event_collabo05_1.mp3",
     "hash": "e437f50f1cbc62c70225c18849dce5a8672f8bf2",
     "name": "bgm_event_collabo05_1"
+  },
+  "uuid_71a6db9b": {
+    "path": "/audio/アナザーエデン/bgm_battle_未来_ロードオブマダ.mp3",
+    "hash": "90b2fe4c21ea28bd2022044229e49720afd32a95",
+    "name": "bgm_battle_未来_ロードオブマダ"
+  },
+  "uuid_4daabf36": {
+    "path": "/audio/アナザーエデン/bgm_人喰い沼.mp3",
+    "hash": "5cb8138318f4076dc69cc82bf1ae706edda3929b",
+    "name": "bgm_人喰い沼"
   },
   "uuid_b0b3e939": {
     "path": "/audio/アナザーエデン/bgm_event_collabo05_2.mp3",
@@ -524,6 +584,11 @@
     "hash": "636c39087129fd31631f07cb78de12a19a5d2934",
     "name": "bgm_tender"
   },
+  "uuid_f99634df": {
+    "path": "/audio/アナザーエデン/bgm_battle_オーガ.mp3",
+    "hash": "8664606ddf35b41b180462e1a3025933558768e0",
+    "name": "bgm_battle_オーガ"
+  },
   "uuid_53e51e54": {
     "path": "/audio/アナザーエデン/bgm_p5_take_over.mp3",
     "hash": "2f99dccb3b109a111c4e3315b2af0a3480afda9f",
@@ -533,6 +598,16 @@
     "path": "/audio/アナザーエデン/bgm_town_general_modern.mp3",
     "hash": "7cfcdb496d6c7160b448a4da0527939fe828b0bb",
     "name": "bgm_town_general_modern"
+  },
+  "uuid_eefea3fb": {
+    "path": "/audio/アナザーエデン/bgm_battle_未来_boss.mp3",
+    "hash": "34ba7f48bb1806e1a692d0b26f1130986e8f1007",
+    "name": "bgm_battle_未来_boss"
+  },
+  "uuid_e105c018": {
+    "path": "/audio/アナザーエデン/bgm_まどか飛び込み.mp3",
+    "hash": "981fff1e09a4b2a12516512f6d46dd02d3b1105a",
+    "name": "bgm_まどか飛び込み"
   },
   "uuid_7c7a058a": {
     "path": "/audio/アナザーエデン/bgm_sad.mp3",
@@ -569,10 +644,20 @@
     "hash": "38e7768b00e47d7a7eceef9adfdbbc8d2fe461b4",
     "name": "bgm_main_theme"
   },
+  "uuid_fd309002": {
+    "path": "/audio/アナザーエデン/bgm_月影の森.mp3",
+    "hash": "eb767892ee3363c4d76447783e6a65ce2d39ba34",
+    "name": "bgm_月影の森"
+  },
   "uuid_d1f7d65a": {
     "path": "/audio/アナザーエデン/bgm_event_foreign_history1_op.mp3",
     "hash": "ed407deb3a8affa4876eaf28d4a091c843e5f61d",
     "name": "bgm_event_foreign_history1_op"
+  },
+  "uuid_3f091c6b": {
+    "path": "/audio/アナザーエデン/bgm_battle_コラボ_ペルソナ.mp3",
+    "hash": "c5fbd6fcbf27e4a31c3cda5636f2f0a78a766b3d",
+    "name": "bgm_battle_コラボ_ペルソナ"
   },
   "uuid_23b6b830": {
     "path": "/audio/アナザーエデン/bgm_エルジオン.mp3",
@@ -583,6 +668,11 @@
     "path": "/audio/アナザーエデン/bgm_IDAスクール.mp3",
     "hash": "b8d68e3d7dfbb124be204beb15031062b80a2f30",
     "name": "bgm_IDAスクール"
+  },
+  "uuid_13d39838": {
+    "path": "/audio/アナザーエデン/bgm_ミグラス城焼け.mp3",
+    "hash": "b0c25d48e9db98d44fa07af4b4cfa0f1fb32aa15",
+    "name": "bgm_ミグラス城焼け"
   },
   "uuid_6aeb605e": {
     "path": "/audio/アナザーエデン/bgm_storm.mp3",
@@ -619,6 +709,11 @@
     "hash": "e7bfdc0eed5cd500218fa1ee4f65f2219b02de91",
     "name": "bgm_デフォルト"
   },
+  "uuid_ea1ad0b2": {
+    "path": "/audio/アナザーエデン/bgm_battle_未来_ノーマル.mp3",
+    "hash": "64a9db86b3e15fb3aeee2fb7073ab86ca8e75b25",
+    "name": "bgm_battle_未来_ノーマル"
+  },
   "uuid_cb08895f": {
     "path": "/audio/アナザーエデン/bgm_event_wandergirl_main_theme_musicbox.mp3",
     "hash": "14a5e057292221582c543c05e30de2d33167f713",
@@ -628,5 +723,10 @@
     "path": "/audio/アナザーエデン/bgm_town_general_ancient.mp3",
     "hash": "6462bbcba4d4061ecf962384aa0e14b6bb478249",
     "name": "bgm_town_general_ancient"
+  },
+  "uuid_94e80562": {
+    "path": "/audio/アナザーエデン/bgm_コメディー.mp3",
+    "hash": "65f33e2643c83a0b001bc7e9e514e1546f4feffc",
+    "name": "bgm_コメディー"
   }
 }
