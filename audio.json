@@ -403,5 +403,230 @@
     "path": "/audio/minecraft/menu/readme.md",
     "hash": "3c6e17bb6dc24bdcbfd5ba976fbf0ea7ddce92aa",
     "name": "readme"
+  },
+  "uuid_50680865": {
+    "path": "/audio/アナザーエデン/bgm_thema_p5c.mp3",
+    "hash": "97cecee33f842fa500e58afa5fd3c5449ec962e1",
+    "name": "bgm_thema_p5c"
+  },
+  "uuid_040b55e5": {
+    "path": "/audio/アナザーエデン/bgm_town_lavieenrose.mp3",
+    "hash": "620182d473f5f1ce3ddb72cf9de85f3971738329",
+    "name": "bgm_town_lavieenrose"
+  },
+  "uuid_32fd4458": {
+    "path": "/audio/アナザーエデン/bgm_event_detective.mp3",
+    "hash": "88a9d896cde91657e1a8a8af72d5e8e8753d3518",
+    "name": "bgm_event_detective"
+  },
+  "uuid_b674afe8": {
+    "path": "/audio/アナザーエデン/bgm_hurryup.mp3",
+    "hash": "6062fe1c2179880f2a21aa978cd26543ee423ec5",
+    "name": "bgm_hurryup"
+  },
+  "uuid_d5f41c09": {
+    "path": "/audio/アナザーエデン/bgm_event_muon.mp3",
+    "hash": "89850212dc23e9cd2d983d483e330072cb0de687",
+    "name": "bgm_event_muon"
+  },
+  "uuid_6f62cf64": {
+    "path": "/audio/アナザーエデン/bgm_field_modern.mp3",
+    "hash": "185d6c18a831c2f4828384f3f386d3180c098b9e",
+    "name": "bgm_field_modern"
+  },
+  "uuid_c1bd88ed": {
+    "path": "/audio/アナザーエデン/bgm_thema_p5r.mp3",
+    "hash": "6f4ae7f6c98fa7a4d02273b75d164a7dde391c72",
+    "name": "bgm_thema_p5r"
+  },
+  "uuid_5a707dcb": {
+    "path": "/audio/アナザーエデン/bgm_flyhigh.mp3",
+    "hash": "5db1858eee8405003d0937ff22f9f04e72fe7672",
+    "name": "bgm_flyhigh"
+  },
+  "uuid_ae2e06a8": {
+    "path": "/audio/アナザーエデン/bgm_field_time_forgot.mp3",
+    "hash": "1909fc4f7904201cfe89b06a0db90203edec9113",
+    "name": "bgm_field_time_forgot"
+  },
+  "uuid_3e639011": {
+    "path": "/audio/アナザーエデン/bgm_field_snakebone_island.mp3",
+    "hash": "ec5c957c6b10a205189f3ea5eb6213c5aea9681b",
+    "name": "bgm_field_snakebone_island"
+  },
+  "uuid_d467d374": {
+    "path": "/audio/アナザーエデン/bgm_pain.mp3",
+    "hash": "073fc080b2eb8572fbc7885bc650283e2b96773a",
+    "name": "bgm_pain"
+  },
+  "uuid_ec6ef17a": {
+    "path": "/audio/アナザーエデン/bgm_town_raula_dome.mp3",
+    "hash": "213c302fa980dfdeaa5f6ce62c49692c61d836fb",
+    "name": "bgm_town_raula_dome"
+  },
+  "uuid_32301167": {
+    "path": "/audio/アナザーエデン/bgm_ユニガン.mp3",
+    "hash": "67266e25905b7b920ffa23065cafa758815724fc",
+    "name": "bgm_ユニガン"
+  },
+  "uuid_937aa971": {
+    "path": "/audio/アナザーエデン/bgm_バルオキー.mp3",
+    "hash": "a3430f73b9e3f4b926b66d048fd0d5b91d43ee35",
+    "name": "bgm_バルオキー"
+  },
+  "uuid_e3cac699": {
+    "path": "/audio/アナザーエデン/bgm_main_theme_musicbox.mp3",
+    "hash": "ec2b0028d11f675d292354fc6a6a155f4ef61c58",
+    "name": "bgm_main_theme_musicbox"
+  },
+  "uuid_9ad286d4": {
+    "path": "/audio/アナザーエデン/bgm_town_general_future.mp3",
+    "hash": "5114c5d2ef547667f6e77c2f38dc486365b837e1",
+    "name": "bgm_town_general_future"
+  },
+  "uuid_ab55dadd": {
+    "path": "/audio/アナザーエデン/bgm_負け.mp3",
+    "hash": "1a8b9e19b59eadc50edb92de96588ef81942a15a",
+    "name": "bgm_負け"
+  },
+  "uuid_35d8ff02": {
+    "path": "/audio/アナザーエデン/bgm_event_cc_unmeini_torawareshi_monotachi.mp3",
+    "hash": "6032cbd51bfc75bd3c64356aa74be9b49f0accff",
+    "name": "bgm_event_cc_unmeini_torawareshi_monotachi"
+  },
+  "uuid_6ef3dc54": {
+    "path": "/audio/アナザーエデン/bgm_event_collabo05_1.mp3",
+    "hash": "e437f50f1cbc62c70225c18849dce5a8672f8bf2",
+    "name": "bgm_event_collabo05_1"
+  },
+  "uuid_b0b3e939": {
+    "path": "/audio/アナザーエデン/bgm_event_collabo05_2.mp3",
+    "hash": "a36a41173baba1c6f58a452066b6de2775639b82",
+    "name": "bgm_event_collabo05_2"
+  },
+  "uuid_3bab56ca": {
+    "path": "/audio/アナザーエデン/bgm_勝ち.mp3",
+    "hash": "fb9fc02db6fad6054e0716a9d07187747881cc47",
+    "name": "bgm_勝ち"
+  },
+  "uuid_25ca255e": {
+    "path": "/audio/アナザーエデン/bgm_fun.mp3",
+    "hash": "3e026552d708afc04b973a6d09c0b2d00837acc9",
+    "name": "bgm_fun"
+  },
+  "uuid_b72ca655": {
+    "path": "/audio/アナザーエデン/bgm_fine.mp3",
+    "hash": "190de366d589d660b543146b23cc4aeca6bb4e03",
+    "name": "bgm_fine"
+  },
+  "uuid_af50ad8c": {
+    "path": "/audio/アナザーエデン/bgm_tender.mp3",
+    "hash": "636c39087129fd31631f07cb78de12a19a5d2934",
+    "name": "bgm_tender"
+  },
+  "uuid_53e51e54": {
+    "path": "/audio/アナザーエデン/bgm_p5_take_over.mp3",
+    "hash": "2f99dccb3b109a111c4e3315b2af0a3480afda9f",
+    "name": "bgm_p5_take_over"
+  },
+  "uuid_081fe915": {
+    "path": "/audio/アナザーエデン/bgm_town_general_modern.mp3",
+    "hash": "7cfcdb496d6c7160b448a4da0527939fe828b0bb",
+    "name": "bgm_town_general_modern"
+  },
+  "uuid_7c7a058a": {
+    "path": "/audio/アナザーエデン/bgm_sad.mp3",
+    "hash": "eafec283538d955e2f67f078314ec261fbb3be62",
+    "name": "bgm_sad"
+  },
+  "uuid_210166ed": {
+    "path": "/audio/アナザーエデン/bgm_main_theme_piano.mp3",
+    "hash": "f3af21b77617922ca2668d8e2d8cb13954aa3e56",
+    "name": "bgm_main_theme_piano"
+  },
+  "uuid_4d05dd52": {
+    "path": "/audio/アナザーエデン/bgm_town_kerukare_castle.mp3",
+    "hash": "cac9d942a77cfb2f6b987d931bf6adc01c6e1b83",
+    "name": "bgm_town_kerukare_castle"
+  },
+  "uuid_16035161": {
+    "path": "/audio/アナザーエデン/bgm_usual.mp3",
+    "hash": "9fdd4049649ad533388c68104a5781e70132f80f",
+    "name": "bgm_usual"
+  },
+  "uuid_00bba0c0": {
+    "path": "/audio/アナザーエデン/bgm_town_school.mp3",
+    "hash": "3c156f633eac32de81506932862beec77effe55a",
+    "name": "bgm_town_school"
+  },
+  "uuid_87846ab1": {
+    "path": "/audio/アナザーエデン/bgm_terror.mp3",
+    "hash": "c835c04cee1e5568b72ca89795cbce7796a45c41",
+    "name": "bgm_terror"
+  },
+  "uuid_e8c0108d": {
+    "path": "/audio/アナザーエデン/bgm_main_theme.mp3",
+    "hash": "38e7768b00e47d7a7eceef9adfdbbc8d2fe461b4",
+    "name": "bgm_main_theme"
+  },
+  "uuid_d1f7d65a": {
+    "path": "/audio/アナザーエデン/bgm_event_foreign_history1_op.mp3",
+    "hash": "ed407deb3a8affa4876eaf28d4a091c843e5f61d",
+    "name": "bgm_event_foreign_history1_op"
+  },
+  "uuid_23b6b830": {
+    "path": "/audio/アナザーエデン/bgm_エルジオン.mp3",
+    "hash": "8b622d43b8d38af565a660b3b5bea21f772ffda7",
+    "name": "bgm_エルジオン"
+  },
+  "uuid_7a3c9e68": {
+    "path": "/audio/アナザーエデン/bgm_IDAスクール.mp3",
+    "hash": "b8d68e3d7dfbb124be204beb15031062b80a2f30",
+    "name": "bgm_IDAスクール"
+  },
+  "uuid_6aeb605e": {
+    "path": "/audio/アナザーエデン/bgm_storm.mp3",
+    "hash": "a26ae1cde2ef1d52c70b76301b3e39dae65ba7f7",
+    "name": "bgm_storm"
+  },
+  "uuid_25d6d640": {
+    "path": "/audio/アナザーエデン/bgm_event_foreign_history1_op_orgel.mp3",
+    "hash": "c022a6256b0e97ab9b4540f7077fdd184186582c",
+    "name": "bgm_event_foreign_history1_op_orgel"
+  },
+  "uuid_6b04ec40": {
+    "path": "/audio/アナザーエデン/bgm_town_ro.mp3",
+    "hash": "52f33b733c2dcc193ed85162b079488f15b82e70",
+    "name": "bgm_town_ro"
+  },
+  "uuid_d4be9f0c": {
+    "path": "/audio/アナザーエデン/bgm_top_arche.mp3",
+    "hash": "02898a55c0e96b1a80eab45f74e7e225a9d6e609",
+    "name": "bgm_top_arche"
+  },
+  "uuid_b8207492": {
+    "path": "/audio/アナザーエデン/bgm_town_alchemy_guild.mp3",
+    "hash": "8687d8d29ea5e390821f5c5904c931630176e13b",
+    "name": "bgm_town_alchemy_guild"
+  },
+  "uuid_7c92875b": {
+    "path": "/audio/アナザーエデン/bgm_the_beast.mp3",
+    "hash": "36bdd2cdab16a8da7472220fb5eabcbe25e5f5d2",
+    "name": "bgm_the_beast"
+  },
+  "uuid_afb40e45": {
+    "path": "/audio/アナザーエデン/bgm_デフォルト.mp3",
+    "hash": "e7bfdc0eed5cd500218fa1ee4f65f2219b02de91",
+    "name": "bgm_デフォルト"
+  },
+  "uuid_cb08895f": {
+    "path": "/audio/アナザーエデン/bgm_event_wandergirl_main_theme_musicbox.mp3",
+    "hash": "14a5e057292221582c543c05e30de2d33167f713",
+    "name": "bgm_event_wandergirl_main_theme_musicbox"
+  },
+  "uuid_4c83ab22": {
+    "path": "/audio/アナザーエデン/bgm_town_general_ancient.mp3",
+    "hash": "6462bbcba4d4061ecf962384aa0e14b6bb478249",
+    "name": "bgm_town_general_ancient"
   }
 }
