@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini programming隊 - 自動整理サウンドボード</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a1a1a; color: #e0e0e0; padding: 20px; }
+        .folder-group { 
+            margin-bottom: 25px; 
+            border-left: 5px solid #3498db; 
+            background: #252525; 
+            padding: 15px; 
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        h2 { color: #3498db; margin-top: 0; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
+        .button-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+        button { 
+            background: #333; color: #fff; border: 1px solid #444; padding: 12px 8px; 
+            border-radius: 6px; cursor: pointer; font-size: 0.9rem;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            transition: all 0.2s ease;
+        }
+        button:hover { background: #3498db; border-color: #fff; transform: translateY(-2px); }
+        button:active { transform: translateY(1px); }
+    </style>
+</head>
+<body>
+
+    <h1>🎧 音声アセット探検ボード</h1>
+    <div id="board"></div>
+
+    <script>
+        const baseUrl = 'https://raw.githubusercontent.com/kakaomames/audio/main';
+
+        async function initBoard() {
+            try {
+                const response = await fetch(`${baseUrl}/audio.json`);
+                const audioData = await response.json();
+                
+                const board = document.getElementById('board');
+                const groups = {};
+
+                // 1. パスを解析してグループ分けするぞ！
+                Object.keys(audioData).forEach(uuid => {
+                    const info = audioData[uuid];
+                    // 例: "/audio/minecraft/sounds/game/recode/music.ogg"
+                    // ↓ ["audio", "minecraft", "sounds", "game", "recode"] に分ける
+                    const parts = info.path.split('/');
+                    // ファイル名（最後）を除いた、親フォルダまでのパスをグループ名にする
+                    const folderPath = parts.slice(1, -1).join(' / '); 
+
+                    if (!groups[folderPath]) {
+                        groups[folderPath] = [];
+                    }
+                    groups[folderPath].push({ uuid, ...info });
+                });
+
+                // 2. グループごとにHTMLを作成！
+                Object.keys(groups).sort().forEach(path => {
+                    const section = document.createElement('div');
+                    section.className = 'folder-group';
+                    
+                    const title = document.createElement('h2');
+                    title.innerText = `📁 ${path}`;
+                    section.appendChild(title);
+
+                    const grid = document.createElement('div');
+                    grid.className = 'button-grid';
+
+                    groups[path].forEach(audio => {
+                        const btn = document.createElement('button');
+                        btn.innerText = audio.name;
+                        btn.title = audio.name; // 長い名前はツールチップで表示
+                        btn.onclick = () => {
+                            console.log(`再生中: ${audio.path}`);
+                            new Audio(`${baseUrl}${audio.path}`).play();
+                        };
+                        grid.appendChild(btn);
+                    });
+
+                    section.appendChild(grid);
+                    board.appendChild(section);
+                });
+
+            } catch (e) {
+                console.error("データ取得失敗！URLを確認してくれ！", e);
+            }
+        }
+
+        initBoard();
+    </script>
+</body>
+</html>
