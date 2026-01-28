@@ -1,4 +1,4 @@
-name: 指紋を用いた高度なオーディオ資産管理
+name: 音声資産管理システム（自動JSON更新）📝
 
 on:
   push:
@@ -8,33 +8,34 @@ on:
       - 'アナザーエデン/**'
 
 jobs:
-  build:
+  アセット更新ジョブ:
+    name: オーディオJSONとマニフェストの自動生成
     runs-on: ubuntu-latest
     permissions:
       contents: write
 
     steps:
-      - name: Checkout repository
+      - name: リポジトリのチェックアウト
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Python環境のセットアップ
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Update Audio Assets
+      - name: 音声データのスキャンとJSON生成
         run: |
-          python - <<EOF
+          python - <<'EOF'
           import os
           import json
           import uuid
           import hashlib
 
           def get_hash(path):
-              print(f"Calculating hash for: {path}")
+              print(f"ハッシュ計算中: {path}")
               with open(path, 'rb') as f:
                   h = hashlib.sha1(f.read()).hexdigest()
-                  print(f"Hash: {h}")
+                  print(f"計算結果 (h): {h}")
                   return h
 
           AUDIO_JSON = 'audio.json'
@@ -46,7 +47,7 @@ jobs:
           if os.path.exists(AUDIO_JSON):
               with open(AUDIO_JSON, 'r', encoding='utf-8') as f:
                   old_audio_data = json.load(f)
-          print(f"old_audio_data size: {len(old_audio_data)}")
+          print(f"既存のデータ数 (old_audio_data size): {len(old_audio_data)}")
           
           manifest_data = {}
           if os.path.exists(MANIFEST_JSON):
@@ -61,41 +62,40 @@ jobs:
           # 2. ファイルスキャン
           for target in TARGET_DIRS:
               if not os.path.exists(target):
-                  print(f"Directory not found: {target}")
+                  print(f"ディレクトリが見つかりません: {target}")
                   continue
               for root, dirs, files in os.walk(target):
                   for file in files:
                       if file.startswith('.'): continue
                       
                       local_path = os.path.join(root, file)
-                      # ここを修正：バックスラッシュをスラッシュに置換
-                      full_url_path = f"/audio/{local_path}".replace('\\', '/')
-                      print(f"full_url_path: {full_url_path}")
+                      full_url_path = f"/audio/{local_path}".replace(os.sep, '/')
+                      print(f"スキャン中のパス: {full_url_path}")
                       
                       file_hash = get_hash(local_path)
                       target_uuid = None
                       
-                      # A. 同じパスが既にあるか？
+                      # A. 既存パスのチェック
                       if full_url_path in path_to_uuid:
                           target_uuid = path_to_uuid[full_url_path]
-                          print(f"Found existing UUID by path: {target_uuid}")
+                          print(f"既存のUUIDを使用 (target_uuid): {target_uuid}")
                       else:
-                          # B. パスは違うけど、中身（ハッシュ）が同じやつがいるか？
+                          # B. リネーム検知（ハッシュ一致）
                           for uid, info in old_audio_data.items():
                               if isinstance(info, dict) and info.get('hash') == file_hash:
                                   old_uid = uid
                                   new_gen_uuid = f"uuid_{uuid.uuid4().hex[:8]}"
                                   manifest_data[old_uid] = new_gen_uuid
                                   target_uuid = new_gen_uuid
-                                  print(f"Rename detected! {info['path']} -> {full_url_path} (New ID: {target_uuid})")
+                                  print(f"リネームを検知！ 新規ID発行: {target_uuid}")
                                   break
                       
-                      # C. 完全な新規ファイル
+                      # C. 完全新規
                       if not target_uuid:
                           target_uuid = f"uuid_{uuid.uuid4().hex[:8]}"
                           if "null" not in manifest_data: manifest_data["null"] = []
                           manifest_data["null"].append(target_uuid)
-                          print(f"Completely new file! Assigned UUID: {target_uuid}")
+                          print(f"完全新規ファイルを検知 (target_uuid): {target_uuid}")
                       
                       new_audio_data[target_uuid] = {
                           "path": full_url_path,
@@ -103,18 +103,18 @@ jobs:
                           "name": os.path.splitext(file)[0]
                       }
 
-          # 4. 保存
+          # 保存
           with open(AUDIO_JSON, 'w', encoding='utf-8') as f:
               json.dump(new_audio_data, f, ensure_ascii=False, indent=2)
           with open(MANIFEST_JSON, 'w', encoding='utf-8') as f:
               json.dump(manifest_data, f, ensure_ascii=False, indent=2)
 
-          print("Successfully updated audio.json and audiomanifest.json")
+          print("audio.json と audiomanifest.json の更新が完了したぞ！")
           EOF
 
-      - name: Commit and Push
+      - name: 変更をリポジトリにコミットしてPush
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add audio.json audiomanifest.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "fix: update audio asset tracking [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "update: 音声アセット管理の更新 [skip ci]" && git push)
