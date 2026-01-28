@@ -1,6 +1,7 @@
 name: 音声資産管理システム（自動JSON更新）📝
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'minecraft/**'
